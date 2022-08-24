@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019-2021 Xingwang Liao
+# Copyright (C) 2019-2021 iGlobal
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
