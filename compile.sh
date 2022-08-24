@@ -5,7 +5,7 @@
 
 dir="$(cd "$(dirname "$0")" ; pwd)"
 
-package_name="v2ray-core"
+package_name="vproxy-core"
 golang_commit="$OPENWRT_GOLANG_COMMIT"
 
 cache_dir=${CACHE_DIR:-"~/cache"}
