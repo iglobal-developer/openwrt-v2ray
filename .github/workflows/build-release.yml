@@ -40,12 +40,15 @@ jobs:
           - arch: arm_cortex-a8_vfpv3
             sdk_url_path: https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8
             sdk_name: -sdk-sunxi-cortexa8_
+          - arch: arm_cortex-a53_vfpv3
+            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa53
+            sdk_name: -sdk-sunxi-cortexa53_
           - arch: arm_cortex-a9
             sdk_url_path: https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic
             sdk_name: -sdk-bcm53xx-generic_
           - arch: arm_cortex-a9_neon
-            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/imx6/generic
-            sdk_name: -sdk-imx6_
+            # sdk_url_path: https://downloads.openwrt.org/snapshots/targets/imx6/generic
+            # sdk_name: -sdk-imx6_
           - arch: arm_cortex-a9_vfpv3
             sdk_url_path: https://downloads.openwrt.org/releases/19.07.2/targets/mvebu/cortexa9
             sdk_name: -sdk-19.07.2-mvebu-cortexa9_
