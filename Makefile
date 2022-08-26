@@ -304,10 +304,10 @@ endef
 define Build/Compile
 	$(eval GO_PKG_BUILD_PKG:=github.com/v2fly/v2ray-core/v5/main)
 	$(call GoPackage/Build/Compile)
-	mv -f $(GO_PKG_BUILD_BIN_DIR)/main $(GO_PKG_BUILD_BIN_DIR)/v2ray
+	mv -f $(GO_PKG_BUILD_BIN_DIR)/main $(GO_PKG_BUILD_BIN_DIR)/vproxy
 
 ifeq ($(CONFIG_PACKAGE_v2ray_$(BUILD_VARIANT)_compress_upx),y)
-	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/v2ray || true
+	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/vproxy || true
 endif
 
 ifneq ($(CONFIG_PACKAGE_v2ray_$(BUILD_VARIANT)_exclude_v2ctl),y)
