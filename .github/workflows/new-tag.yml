@@ -62,7 +62,7 @@ jobs:
       - name: Save Build Result
         uses: actions/upload-artifact@v2
         with:
-          name: vproxy-core
+          name: v2ray-core
           path: |
             *.ipk
           retention-days: 7
