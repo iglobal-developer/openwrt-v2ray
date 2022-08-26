@@ -1,4 +1,4 @@
-name: Scan V2Ray Version
+name: Scan VProxy Version
 
 on:
   schedule:
