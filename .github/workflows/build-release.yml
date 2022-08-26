@@ -129,17 +129,17 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ env.CACHE_DIR }}
-          key: ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:release:cache:${{ github.run_number }}
+          key: ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:release:cache:${{ github.run_number }}
           restore-keys: |
-            ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:cache:
+            ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:cache:
 
       - name: Setup CCache
         uses: actions/cache@v2
         with:
           path: ~/.ccache
-          key: ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:release:ccache:${{ github.run_number }}
+          key: ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:release:ccache:${{ github.run_number }}
           restore-keys: |
-            ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:ccache:
+            ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:ccache:
 
       - name: Install Dependencies
         run: |
