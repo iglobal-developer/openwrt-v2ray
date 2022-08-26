@@ -6,7 +6,6 @@
 #
 
 include $(TOPDIR)/rules.mk
-
 PKG_NAME:=vproxy-core
 PKG_NAME_ORG:=v2ray-core
 PKG_VERSION:=5.0.7
