@@ -24,17 +24,17 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ env.CACHE_DIR }}
-          key: ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:cache:${{ github.run_number }}
+          key: ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:cache:${{ github.run_number }}
           restore-keys: |
-            ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:cache:
+            ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:cache:
 
       - name: Setup CCache
         uses: actions/cache@v2
         with:
           path: ~/.ccache
-          key: ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:ccache:${{ github.run_number }}
+          key: ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:ccache:${{ github.run_number }}
           restore-keys: |
-            ${{ runner.os }}:openwrt-vproxy:${{ env.ARCH }}:ccache:
+            ${{ runner.os }}:openwrt-v2ray:${{ env.ARCH }}:ccache:
 
       - name: Install Dependencies
         run: |
@@ -63,7 +63,7 @@ jobs:
       - name: Save Build Result
         uses: actions/upload-artifact@v2
         with:
-          name: vproxy-core
+          name: v2ray-core
           path: |
             *.ipk
           retention-days: 7
