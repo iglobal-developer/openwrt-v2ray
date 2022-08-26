@@ -6,12 +6,12 @@
 #
 
 include $(TOPDIR)/rules.mk
-
-PKG_NAME:=v2ray-core
+PKG_NAME:=vproxy-core
+PKG_NAME_ORG:=v2ray-core
 PKG_VERSION:=5.0.7
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE:=$(PKG_NAME_ORG)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/v2fly/v2ray-core/tar.gz/v$(PKG_VERSION)?
 PKG_HASH:=67a3c5f19eb4b21dd270bb60a17220512d4ff221d2da3070e66926686f140ce3
 
