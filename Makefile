@@ -326,14 +326,14 @@ define Package/v2ray-core/install
 
 	$(INSTALL_DIR) $(1)/usr/bin
 
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/v2ray $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/vproxy $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/v2ctl $(1)/usr/bin
 
-	$(INSTALL_DIR) $(1)/usr/share/v2ray
+	$(INSTALL_DIR) $(1)/usr/share/vproxy
 
 	$(INSTALL_DATA) \
 		$(PKG_BUILD_DIR)/release/config/{geoip,geosite}.dat \
-		$(1)/usr/share/v2ray
+		$(1)/usr/share/vproxy
 endef
 
 define Package/v2ray-core-mini/install
@@ -341,9 +341,9 @@ define Package/v2ray-core-mini/install
 
 	$(INSTALL_DIR) $(1)/usr/bin
 
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/v2ray $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/vproxy $(1)/usr/bin
 
-	$(INSTALL_DIR) $(1)/usr/share/v2ray
+	$(INSTALL_DIR) $(1)/usr/share/vproxy
 
 ifneq ($(CONFIG_PACKAGE_v2ray_mini_exclude_v2ctl),y)
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/v2ctl $(1)/usr/bin
@@ -352,7 +352,7 @@ endif
 ifneq ($(CONFIG_PACKAGE_v2ray_mini_exclude_assets),y)
 	$(INSTALL_DATA) \
 		$(PKG_BUILD_DIR)/release/config/{geoip,geosite}.dat \
-		$(1)/usr/share/v2ray
+		$(1)/usr/share/vproxy
 endif
 endef
 
